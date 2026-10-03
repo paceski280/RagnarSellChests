@@ -1,0 +1,15 @@
+name: RagnarSellChests
+version: 1.3.0
+main: fr.ragnar.sellchests.RagnarSellChests
+api-version: '1.21'
+authors: [paceski28]
+depend: [EconomyShopGUI]
+commands:
+  sellchest:
+    description: Manage SellChests
+    aliases: [sellchests, rsc]
+    usage: /sellchest
+permissions:
+  ragnarsellchests.admin:
+    description: Access to RagnarSellChests administrative commands and owner bypass
+    default: op
