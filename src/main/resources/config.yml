@@ -1,0 +1,45 @@
+# RagnarSellChests 1.3.0
+allowed-worlds:
+  - world
+  - world_nether
+  - world_the_end
+
+# One sale attempt every 2 minutes. The countdown pauses while the owner is offline.
+sell-interval-seconds: 120
+
+# SellChest lifetime continues even while the owner is offline.
+max-duration-days: 365
+default-boost: 1.0
+max-boost: 5.0
+
+# Create any rank names you want.
+# Permission format: ragnarsellchests.limit.<rank>
+# If a player has multiple limit permissions, the highest limit is used.
+limits:
+  default: 1
+  vip: 2
+  premium: 3
+  legend: 5
+
+sale-notification:
+  sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  volume: 0.8
+  pitch: 1.15
+
+hologram:
+  enabled: true
+  height: 1.55
+  active-text: |-
+    &b&lSELL CHEST
+    &7Owner: &f%owner%
+    &7Time remaining: &f%remaining%
+    &7Multiplier: &a×%boost%
+    &7Generated: &a%earned% $
+    &7Next sale: &f%next%
+  expired-text: |-
+    &b&lSELL CHEST
+    &7Owner: &f%owner%
+    &cEXPIRED
+    &7Multiplier: &a×%boost%
+    &7Generated: &a%earned% $
+    &cAutomatic selling disabled
